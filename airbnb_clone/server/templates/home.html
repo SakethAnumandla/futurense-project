@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Airbnb</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../static/css/mystyle.css">
+        <link rel="shortcut icon" href="../static/images/favicon.png" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="../static/images/icons/css/all.min.css">
+        <script src="../static/images/icons/js/all.min.js"></script>
+        <script>
+            // JavaScript functions to handle login, booking, and search functionality
+      
+            function login() {
+              // Redirect to login page (you need to replace 'Login.html' with your actual login page)
+              window.location.href = "Login.html";
+            }
+      
+            function myBooking() {
+              // Redirect to booking page (you need to replace 'Booking.html' with your actual booking page)
+              window.location.href = "Booking.html";
+            }
+      
+            function performSearch() {
+              const location = document.getElementById("locationInput").value;
+              const checkIn = document.getElementById("checkInInput").value;
+              const checkOut = document.getElementById("checkOutInput").value;
+              const guests = document.getElementById("guestsInput").value;
+      
+              // Validate inputs (add your validation logic if needed)
+              if (location && checkIn && checkOut && guests) {
+                // Redirect to search results page with query parameters
+                window.location.href = `search.html?location=${location}&checkIn=${checkIn}&checkOut=${checkOut}&guests=${guests}`;
+              } else {
+                alert("Please fill in all search fields.");
+              }
+            }
+        </script>
+    </head>
+    <body>
+       <div class="top">
+          <p class="top-text">Latest News about our response against COVID-19</p>
+       </div>
+       <script src="../Airbnb/js/script.js"></script>
+
+       <div class="background">
+           <div class="menu-container">
+                <div class="menu-flex">
+                    <img src="../static/images/logo.png" class="logo"/>
+                </div>
+                <div class="menu-flex">
+                    <div class="menus">
+                        <div class="item-menu"><a href="Stays.html" style="text-decoration: none;color: black;">Stays</a></div>
+                        <div class="item-menu"><a href="/mybookings" style="text-decoration: none;color: black;">My Booking</a></div>
+                        <div class="item-menu"><a href="Login.html" style="text-decoration: none;color: black;">Register/Login</a></div>
+                        <div class="item-menu"><a href="Chatbot.html" style="text-decoration: none;color: black;">Chatbot</a></div>
+                    </div>
+                </div>
+                <div class="menu-flex">
+                    <div class="right-menu">
+                        <div class="right-menu-item">
+                            <button class="menu-globe"><span class="material-icons globe">language</span></button>
+                            <div class="button-icons"><span class="material-icons iconMenu">menu</span> <span class="material-icons iconUser">account_circle</span>
+                            <span class="material-icons  iconDot">fiber_manual_record</span>
+                            <i class="fa-solid fa-circle iconCircle"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           </div>
+           <div class="search-box-container">
+            <div class="search-box">
+                <div class="search-item-1">
+                    <div class="location">
+                        <b class="search-item-top">Location</b>
+                        <input
+                id="locationInput"
+                type="text"
+                placeholder="Where are you going?"
+                class="search-item-bottom1"
+              />
+                    </div>
+                </div>
+                <div class="search-item">
+                    <div class="location">
+                        <b class="search-item-top">Check in</b>
+                        <input id="checkInInput" type="date" class="search-item-bottom2" />
+                    </div>
+                </div>
+                <div class="search-item">
+                    <div class="location">
+                        <b class="search-item-top">Check out</b>
+                        <input
+                id="checkOutInput"
+                type="date"
+                class="search-item-bottom3"
+              />
+                    </div>
+                </div>
+                <div class="search-item-4">
+                    <div class="itens-4">
+                        <div class="location-4">
+                            <b class="search-item-top">Guests</b>
+                            <input
+                            id="guestsInput"
+                            type="number"
+                            placeholder="Add guests"
+                            class="search-item-bottom4"
+                          />                            
+                        </div>
+                        <div class="search-button-container">
+                            <button onclick="performSearch()" class="search-button"><i class="fa-solid fa-magnifying-glass search-icon"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           </div>
+
+           <div class="nature">
+               <div class="the-best-of-nature-top">
+                    The best of nature
+               <!-- </div>
+                <div class="the-best-of-nature-bottom"> -->
+               </div>
+               <p class="suggestions">Suggestions of favourites on Airbnb.</p>
+               <button class="inspire-button">Inspire yourself</button>
+           </div>
+       </div> <!--Fim do Background-->
+
+       <br><br><br>
+     
+        <b class="explore">Explore places around you</b>
+        <br><br>
+        <div class="places">
+            <div class="item-place">
+                <div class="local-image-div">
+                    <img class="local-image" src="../static/images/place1.webp">
+                </div>
+                <div class="local-desc">
+                   <b class="city">Huntsville</b>
+                   <p class="distance">185 km away</p>
+                </div>
+            </div>
+
+            <div class="item-place">
+                <div class="local-image-div">
+                    <img class="local-image" src="../static/images/place1.webp">
+                </div>
+                <div class="local-desc">
+                   <b class="city">Collingwood</b>
+                   <p class="distance">112 km away</p>
+                </div>                
+            </div>
+
+            <div class="item-place">
+                <div class="local-image-div">
+                    <img class="local-image" src="../static/images/place2.webp">
+                </div>
+                <div class="local-desc">
+                   <b class="city">Midland</b>
+                   <p class="distance">126 km away</p>
+                </div>                
+            </div>
+
+            <div class="item-place">
+                <div class="local-image-div">
+                    <img class="local-image" src="../static/images/place3.webp">
+                </div>
+                <div class="local-desc">
+                   <b class="city">Peterborough</b>
+                   <p class="distance">113 km away</p>
+                </div>                
+            </div>
+        </div>
+        <!--Mais Locais-->
+        <div class="more-places">
+            <div class="item-place">
+                <div class="local-image-div">
+                    <img class="local-image" src="../static/images/place1.png">
+                </div>
+                <div class="local-desc">
+                   <b class="city">Niagara Falls</b>
+                   <p class="distance">153 km away</p>
+                </div>
+            </div>
+
+            <div class="item-place">
+                <div class="local-image-div">
+                    <img class="local-image" src="../static/images/place2.png">
+                </div>
+                <div class="local-desc">
+                   <b class="city">Hamilton</b>
+                   <p class="distance">93 km away</p>
+                </div>                
+            </div>
+
+            <div class="item-place">
+                <div class="local-image-div">
+                    <img class="local-image" src="../static/images/place3.png">
+                </div>
+                <div class="local-desc">
+                   <b class="city">Dundas</b>
+                   <p class="distance">96 km away</p>
+                </div>                
+            </div>
+
+            <div class="item-place">
+                <div class="local-image-div">
+                    <img class="local-image" src="../static/images/place4.png">
+                </div>
+                <div class="local-desc">
+                   <b class="city">Niagara-on-the-Lake</b>
+                   <p class="distance">157 km away</p>
+                </div>                
+            </div>
+        </div>        
+
+        <br><br><br>
+        <b class="explore">Live anywhere</b>
+        <br><br>
+        <!--Living Anywhere-->
+        <div class="places-living">
+            <div class="item-place-living">
+                <img class="living-img" src="../static/images/living1.webp">
+                <p>Porto - Portugal</p>
+            </div>
+            <div class="item-place-living">
+                <img class="living-img" src="../static/images/living2.webp">
+                <p>Murcia - Espanha</p>
+            </div>
+            <div class="item-place-living">
+                <img class="living-img" src="../static/images/living3.webp">
+                <p>Sopocachi - Bolívia</p>
+            </div>
+            <div class="item-place-living">
+                <img class="living-img" src="../static/images/living4.webp">
+                <p>Kibuye - Ruanda</p>
+            </div>
+        </div>
+        <br><br><br>
+        <b class="explore">Comments from our guests</b>
+        <br><br>
+        <div class="comments">
+            <div class="item-comment">
+                <p class="comment">
+                    <b>Aisha:</b> "A comfortable and delightful experience in the heart of the city. Everything you might possibly need is close by. Highly recommend!"
+                </p>
+            </div>
+            <div class="item-comment">
+                <p class="comment">
+                    <b>Fatima:</b> "This was an amazing experience. The hosts were very hospitable and helpful. I can't wait to visit again!"
+                </p>
+            </div>
+            <div class="item-comment">
+                <p class="comment">
+                    <b>James:</b> "Great location and beautiful views! Would definitely come back again."
+                </p>
+            </div>
+            <div class="item-comment">
+                <p class="comment">
+                    <b>Emily:</b> "Lovely place with great amenities. Would recommend it to anyone visiting the area."
+                </p>
+            </div>
+        </div>
+
+        <br><br><br>
+        <div class="footer">
+            <div class="footer-container">
+                <div class="footer-flex">
+                    <div class="footer-column">
+                        <b class="footer-title">About</b>
+                        <a href="about.html" class="footer-link">How Airbnb works</a>
+                        <a href="about.html" class="footer-link">Newsroom</a>
+                        <a href="about.html" class="footer-link">Airbnb 2024</a>
+                        <a href="about.html" class="footer-link">Investors</a>
+                        <a href="about.html" class="footer-link">Airbnb Plus</a>
+                    </div>
+                    <div class="footer-column">
+                        <b class="footer-title">Community</b>
+                        <a href="community.html" class="footer-link">Hosts</a>
+                        <a href="community.html" class="footer-link">Donate</a>
+                        <a href="community.html" class="footer-link">support help for</a>
+                        <a href="community.html" class="footer-link">Your staff</a>
+                        <a href="community.html" class="footer-link">Kerby's way</a>
+                    </div>
+                    <div class="footer-column">
+                        <b class="footer-title">Services</b>
+                        <a href="services.html" class="footer-link">Trust and safety</a>
+                        <a href="services.html" class="footer-link">Horizon</a>
+                        <a href="services.html" class="footer-link">our re sources</a>
+                        <a href="services.html" class="footer-link">Tyrash</a>
+                        <a href="services.html" class="footer-link">Assistance</a>
+                    </div>
+                    <div class="footer-column">
+                        <b class="footer-title">Terms</b>
+                        <a href="terms.html" class="footer-link">Gift card</a>
+                        <a href="terms.html" class="footer-link">Best and</a>
+                        <a href="terms.html" class="footer-link">Get The best off what is the best of a spa care</a>
+                        <a href="terms.html" class="footer-link">Privacy</a>
+                        <a href="terms.html" class="footer-link">Policy</a>
+                    </div>
+                </div>
+                <div class="footer-line">
+                    <p class="footer-text">Reserves</p>
+                    <p class="footer-text">Abougs, Inc.</p>
+                    <p class="footer-text">GB — USD) Taxes & Rights</p>
+                    <p class="footer-text">Questions? Deposets. Reserve and available, more to say?</p>
+                    <p class="footer-text">www.airbnb.com</p>
+                    <p class="footer-text">your rights, and terms are supported to your duty. a web form, tell him</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
